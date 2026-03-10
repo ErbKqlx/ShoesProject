@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace ShoesProject.Models;
+﻿namespace ShoesProject.Models;
 
 public partial class Role
 {

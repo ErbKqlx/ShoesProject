@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace ShoesProject.Models;
+﻿namespace ShoesProject.Models;
 
 public partial class User
 {
@@ -19,7 +16,7 @@ public partial class User
 
     public string Pass { get; set; } = null!;
 
-    public virtual Role IdRoleNavigation { get; set; } = null!;
+    public virtual Role Role { get; set; } = null!;
 
     public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
 }
