@@ -47,6 +47,7 @@ namespace ShoesProject
             IsGuest = guest;
 
             lblUsername.Text = IsGuest ? "Гость" : CurrentUser.FullName;
+            btnGetOrders.Visible = !IsGuest;
 
             LoadProducts();
         }
@@ -172,6 +173,12 @@ namespace ShoesProject
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             base.OnFormClosing(e);
+        }
+
+        private void BtnGetOrders_Click(object sender, EventArgs e)
+        {
+            var formOrders = new FormOrders();
+            formOrders.ShowDialog();
         }
     }
 }

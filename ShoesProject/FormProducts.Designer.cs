@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             panelTop = new Panel();
             lblUsername = new Label();
+            btnGetOrders = new Button();
             btnLogout = new Button();
             dgvProducts = new DataGridView();
             panelTop.SuspendLayout();
@@ -40,6 +41,7 @@
             // panelTop
             // 
             panelTop.Controls.Add(lblUsername);
+            panelTop.Controls.Add(btnGetOrders);
             panelTop.Controls.Add(btnLogout);
             panelTop.Dock = DockStyle.Top;
             panelTop.Location = new Point(10, 10);
@@ -52,12 +54,26 @@
             // 
             lblUsername.AutoSize = true;
             lblUsername.Dock = DockStyle.Right;
-            lblUsername.Location = new Point(769, 0);
+            lblUsername.Location = new Point(619, 0);
             lblUsername.Name = "lblUsername";
             lblUsername.Size = new Size(45, 19);
-            lblUsername.TabIndex = 6;
+            lblUsername.TabIndex = 8;
             lblUsername.Text = "label1";
             lblUsername.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // btnGetOrders
+            // 
+            btnGetOrders.BackColor = Color.MediumSpringGreen;
+            btnGetOrders.Dock = DockStyle.Right;
+            btnGetOrders.FlatAppearance.BorderSize = 0;
+            btnGetOrders.FlatStyle = FlatStyle.Flat;
+            btnGetOrders.Location = new Point(664, 0);
+            btnGetOrders.Name = "btnGetOrders";
+            btnGetOrders.Size = new Size(150, 30);
+            btnGetOrders.TabIndex = 7;
+            btnGetOrders.Text = "Заказы";
+            btnGetOrders.UseVisualStyleBackColor = false;
+            btnGetOrders.Click += BtnGetOrders_Click;
             // 
             // btnLogout
             // 
@@ -83,14 +99,14 @@
             dgvProducts.BorderStyle = BorderStyle.None;
             dgvProducts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvProducts.ColumnHeadersVisible = false;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Window;
-            dataGridViewCellStyle1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            dataGridViewCellStyle1.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvProducts.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvProducts.DefaultCellStyle = dataGridViewCellStyle2;
             dgvProducts.Dock = DockStyle.Fill;
             dgvProducts.Location = new Point(10, 50);
             dgvProducts.MultiSelect = false;
@@ -127,5 +143,6 @@
         private DataGridView dgvProducts;
         private Button btnLogout;
         private Label lblUsername;
+        private Button btnGetOrders;
     }
 }
